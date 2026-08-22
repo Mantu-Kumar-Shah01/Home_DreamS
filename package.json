@@ -11,7 +11,8 @@
     "tail": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist"
+    "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist --project-name=home-dreams",
+    "deploy:worker": "npm run build && npx wrangler deploy"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
